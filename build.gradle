@@ -1,0 +1,19 @@
+allprojects {
+    repositories {
+        flatDir {
+            dirs '../lib'
+        }
+        jcenter()
+    }
+}
+
+subprojects {
+    version = '1.0'
+
+    apply plugin: 'java'
+    apply plugin: 'application'
+
+    dependencies {
+        compile name: 'hermes-0.9-jar-with-dependencies'
+    }
+}
