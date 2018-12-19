@@ -6,6 +6,8 @@ allowed to write to the master but can read from all the nodes.
 
 The system was developed as a university project at TU Berlin.
 
+This repository also provides a Client API for the storage. It can be seen in action in the example client that is also shipped with the project.
+
 
 ## How to build
 
@@ -35,13 +37,14 @@ Run `server/build/libs/server-<version>.jar <port> <hs> <ps> [<sync>]`, where
 - `<sync>` denotes that synchronous replication is used (leave it empty, if you need asynchronous replication).
 
 
-## How to run the client
+## How to run the example client
 
-Run `client/build/libs/client-<version>.jar <id> <host> <port>`, where
+Run `client/build/libs/client-<version>.jar <id> <host> <port> <i>`, where
 
 - `<id>` is the ID of this client.
 - `<host>` is the host of the server instance.
 - `<port>` is the port of the server instance.
+- `<i>` is the number of requests that the client should issue to the server.
 
 
 ## Client API
